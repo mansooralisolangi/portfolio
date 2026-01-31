@@ -7,64 +7,126 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
 <!-- HEADER -->
-<div id="header"></div>
+<header class="header">
+    <div class="logo">Mansoor <span>Ali</span></div>
+
+    <div class="burger" id="burger">       
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="contact_us.html" class="nav-contact">Contact</a>
+    </nav>
+</header>
 
 <!-- MAIN CONTENT -->
 <main>
-
     <section class="hero" id="home">
         <div class="shape s1"></div>
         <div class="shape s2"></div>
 
         <div class="hero-container">
+            <!-- Left Side: Image (will be on left on desktop, top on mobile) -->
+            <div class="hero-right">
+                <div class="image-wrapper">
+                    <img src="images/image1.png" alt="Mansoor Ali - Full Stack Developer" class="main-img">
+                </div>
+            </div>
+
+            <!-- Right Side: Text Content (will be on right on desktop, bottom on mobile) -->
             <div class="hero-content">
                 <span class="greeting">Hi There 👋</span>
-                <h1>I’m <span>Mansoor Ali</span></h1>
+                <h1>I'm <span>Mansoor Ali</span></h1>
 
                 <p class="description">
                     Full Stack Web Developer creating high-performance, modern web applications.
                 </p>
 
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Hire Me Now</a>
-                    <a href="resume.pdf" class="btn btn-secondary">
+                    <a href="contact_us.html" class="btn btn-primary">Hire Me Now</a>
+                    
+                    <a href="Mansoor_Ali_Resume.pdf" class="btn btn-secondary" download>
                         <i class="fas fa-download"></i> Resume
                     </a>
+                      
                 </div>
+                
                 <div class="social-links">
-                <a href="https://github.com/mansooralisolangi" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.linkedin.com/in/mansoor-ali-25046224b/" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
-
-                <!-- <div class="social-icons">
-                    <a href="https://github.com/mansooralisolangi"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/mansoor-ali-25046224b/"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div> -->
-            </div>
-
-            <div class="hero-right">
-                <div class="image-wrapper">
-                    <div class="dev-gif"></div>
-                    <img src="images/image1.png" alt="Developer" class="main-img">
+                    <a href="https://www.linkedin.com/in/mansoor-ali-25046224b/" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/mansooralisolangi" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
 </main>
 
 <!-- FOOTER -->
-<div id="footer"></div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html#home"><i class="fas fa-angle-right"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-angle-right"></i> About</a></li>
+                <li><a href="index.html#projects"><i class="fas fa-angle-right"></i> Projects</a></li>
+                <li><a href="index.html#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+            </ul>
+        </div>
 
-<script src="js/include.js"></script>
-<script src="js/scripts.js"></script>
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p><i class="fas fa-envelope"></i> mansooralisolangi160@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +92 3225844067</p>
+            <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Me</h3>
+            <div class="social-links-footer">
+                <a href="https://www.linkedin.com/in/mansoor-ali-25046224b/" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/mansooralisolangi" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Mansoor Ali | Designed with ❤️ & Excellence</p>
+    </div>
+</footer>
+
+<script src="js/home.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/header.js"></script>
 
 </body>
 </html>
