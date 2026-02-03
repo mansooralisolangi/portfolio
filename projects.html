@@ -3,9 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project page </title>
+    <title>Projects - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/project.css">
+     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>continue</h1>
+<body class="projects-page">
+    <!-- Header/Navigation -->
+   <header class="header">
+      <div class="logo">Mansoor <span>Ali</span></div>
+
+      <div class="burger" id="burger">       
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+     <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="contact_us.html" class="nav-contact">Contact</a>
+    </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="projects-main">
+        <!-- Hero Section -->
+        <section class="projects-hero">
+            <div class="projects-container">
+                <h1 class="projects-title">My <span>Projects</span></h1>
+                <p class="projects-subtitle">Showcasing my journey through code, design, and innovation</p>
+                <div class="projects-stats">
+                    <div class="stat">
+                        <h3>12+</h3>
+                        <p>Total Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3>8</h3>
+                        <p>Live Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4</h3>
+                        <p>In Progress</p>
+                    </div>
+                    <div class="stat">
+                        <h3>15+</h3>
+                        <p>Technologies Used</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Filter -->
+        <section class="projects-filter">
+            <div class="projects-container">
+                <div class="filter-container">
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="live">Live Projects</button>
+                        <button class="filter-btn" data-filter="progress">In Progress</button>
+                        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                        <button class="filter-btn" data-filter="frontend">Frontend</button>
+                        <button class="filter-btn" data-filter="backend">Backend</button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search projects..." id="projectSearch">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="layout-controls">
+                    <button class="layout-btn active" data-layout="grid">
+                        <i class="fas fa-th"></i> Grid
+                    </button>
+                    <button class="layout-btn" data-layout="list">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-grid-section">
+            <div class="projects-container">
+                <div class="projects-grid grid-view" id="projectsGrid">
+                    <!-- Projects will be loaded by JavaScript -->
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="load-more-container" id="loadMoreContainer">
+                    <button class="load-more-btn" id="loadMoreBtn">
+                        <i class="fas fa-plus"></i> Load More Projects
+                    </button>
+                </div>
+                
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-folder-open"></i>
+                    <h3>No projects found</h3>
+                    <p>Try a different filter or search term</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="projects-cta">
+            <div class="projects-container">
+                <div class="cta-content">
+                    <h2>Have a Project in Mind?</h2>
+                    <p>Let's collaborate and bring your ideas to life with cutting-edge technology and creative solutions.</p>
+                    <a href="contact.html" class="cta-btn">
+                        Start a Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+   
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html#home"><i class="fas fa-angle-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About</a></li>
+            <li><a href="index.html#projects"><i class="fas fa-angle-right"></i> Projects</a></li>
+            <li><a href="index.html#services"><i class="fas fa-angle-right"></i> Services</a></li>
+            <li><a href="index.html#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact</h3>
+          <p><i class="fas fa-envelope"></i> mansooralisolangi160@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +92 3225844067</p>
+          <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow Me</h3>
+          <div class="social-links-footer">
+            <a href="https://www.linkedin.com/in/mansoor-ali-25046224b/" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/mansooralisolangi" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Mansoor Ali | Designed with ❤️ & Excellence</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+   
+    <!-- JavaScript Files -->
+    <script src="js/projects.js"></script>
+    <script src="js/footer.js"></script>
+<script src="js/header.js"></script>
 </body>
 </html>
