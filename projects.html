@@ -6,7 +6,10 @@
     <title>Projects - Web Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/project.css">
-     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+
+
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,21 +17,37 @@
 <body class="projects-page">
     <!-- Header/Navigation -->
    <header class="header">
-      <div class="logo">Mansoor <span>Ali</span></div>
+        <a href="index.html" class="logo">Mansoor <span>Ali</span></a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact_us.html" class="nav-contact">Hire Me</a>
+        </nav>
 
-      <div class="burger" id="burger">       
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <!-- Beautiful Burger Button -->
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+            <div class="burger-box">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
 
-     <nav class="nav" id="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="services.html">Services</a>
-        <a href="contact_us.html" class="nav-contact">Contact</a>
-    </nav>
+        <!-- Mobile Slide-out Navigation -->
+        <div class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact_us.html" class="nav-contact">Hire Me</a>
+        </div>
+
+        <!-- Overlay -->
+        <div class="menu-overlay"></div>
     </header>
 
     <!-- Main Content -->
@@ -125,56 +144,38 @@
 
     <!-- Footer -->
    
-<footer class="footer">
-      <div class="footer-container">
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html#home"><i class="fas fa-angle-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fas fa-angle-right"></i> About</a></li>
-            <li><a href="index.html#projects"><i class="fas fa-angle-right"></i> Projects</a></li>
-            <li><a href="index.html#services"><i class="fas fa-angle-right"></i> Services</a></li>
-            <li><a href="index.html#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
-          </ul>
+   <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h3>Mansoor <span>Ali</span></h3>
+                <p style="color: #cbd5e1; max-width: 300px;">Crafting high-quality digital experiences with modern technology and a focus on detail.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
         </div>
-
-        <div class="footer-contact">
-          <h3>Contact</h3>
-          <p><i class="fas fa-envelope"></i> mansooralisolangi160@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +92 3225844067</p>
-          <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mansoor Ali | Full Stack Developer</p>
         </div>
-
-        <div class="footer-social">
-          <h3>Follow Me</h3>
-          <div class="social-links-footer">
-            <a href="https://www.linkedin.com/in/mansoor-ali-25046224b/" title="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/mansooralisolangi" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="#" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2026 Mansoor Ali | Designed with ❤️ & Excellence</p>
-      </div>
     </footer>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-   
+        
     <!-- JavaScript Files -->
     <script src="js/projects.js"></script>
-    <script src="js/footer.js"></script>
+ <script src="js/footer.js"></script>
 <script src="js/header.js"></script>
 </body>
 </html>
