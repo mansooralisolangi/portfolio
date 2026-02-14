@@ -18,12 +18,13 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-body {
-    background-color: var(--light-bg);
-    color: var(--text-main);
-    overflow-x: hidden;
-    min-height: 100vh;
-}
+ body {
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
 
 /* ===== HEADER ===== */
 .header {
