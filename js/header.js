@@ -1,30 +1,41 @@
-// Mobile Navigation Toggle
-const burger = document.getElementById('burger');
-const nav = document.getElementById('nav');
-const body = document.body;
+// Mobile Menu Toggle
+        const burger = document.querySelector('.burger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.menu-overlay');
+        const body = document.body;
+        const mobileLinks = document.querySelectorAll('.mobile-nav a');
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    burger.classList.toggle('active');
-    body.classList.toggle('menu-open');
-});
+        function toggleMenu() {
+            burger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            
+            // Update ARIA attribute for accessibility
+            const isExpanded = burger.classList.contains('active');
+            burger.setAttribute('aria-expanded', isExpanded);
+        }
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        nav.classList.remove('active');
-        burger.classList.remove('active');
-        body.classList.remove('menu-open');
-    });
-});
+        burger.addEventListener('click', toggleMenu);
 
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (nav.classList.contains('active') && 
-        !nav.contains(e.target) && 
-        !burger.contains(e.target)) {
-        nav.classList.remove('active');
-        burger.classList.remove('active');
-        body.classList.remove('menu-open');
-    }
-});
+        // Close menu when clicking on overlay
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking on a mobile link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Close menu on escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Handle window resize - close menu if screen becomes larger than mobile breakpoint
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 992 && mobileNav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
